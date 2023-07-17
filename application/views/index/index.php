@@ -4,17 +4,17 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Metorik - Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>Dashboard Management DQM</title>
       <!-- Favicon -->
-      <link rel="shortcut icon" href="images/favicon.ico" />
+      <link rel="shortcut icon" href="<?= base_url("assets/images/favicon.ico") ?>" />
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="<?= base_url("assets/css/bootstrap.min.css") ?>" >
       <!-- Typography CSS -->
-      <link rel="stylesheet" href="css/typography.css">
+      <link rel="stylesheet" href="<?= base_url("assets/css/typography.css")?> ">
       <!-- Style CSS -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="<?= base_url("assets/css/style.css") ?>">
       <!-- Responsive CSS -->
-      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="<?= base_url("assets/css/responsive.css") ?>">
    </head>
    <body class="header-top-bg">
       <!-- loader Start -->
@@ -27,9 +27,9 @@
          <!-- Sidebar  -->
          <div class="iq-sidebar">
             <div class="iq-sidebar-logo d-flex justify-content-between">
-               <a href="index.html">
-               <img src="images/logo.gif" class="img-fluid" alt="">
-               <span>Metorik</span>
+               <a href="<?php echo site_url('index') ?>">
+               <img src="<?= base_url("assets/images/logo.gif") ?>" class="img-fluid" alt="">
+               <span>DQM</span>
                </a>
                <div class="iq-menu-bt align-self-center">
                   <div class="wrapper-menu">
@@ -43,21 +43,12 @@
                <nav class="iq-sidebar-menu">
                   <ul id="iq-sidebar-toggle" class="iq-menu">
                      <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
+
                      <li class="active">
-                        <a href="#dashboard" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="true"><i class="las la-home"></i><span>Dashboard</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="dashboard" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li class="active"><a href="index.html">Dashboard 1</a></li>
-                           <li><a href="dashboard1.html">Dashboard 2</a></li>
-                        </ul>
+                        <a href="<?php site_url('index') ?>"><i class="las la-home"></i><span>Dashboard</span></a>
                      </li>
-                     <li>
-                        <a href="#mailbox" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-envelope-open"></i><span>Email</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="mailbox" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="app/index.html">Inbox</a></li>
-                           <li><a href="app/email-compose.html">Email Compose</a></li>
-                        </ul>
-                     </li>
-                        <li><a href="todo.html" class="iq-waves-effect"><i class="las la-check-square"></i><span>Todo</span></a></li>
+                     
+                        <li><a href="<?php site_url('siswa') ?>" class="iq-waves-effect"><i class="las la-check-square"></i><span>Siswa</span></a></li>
                      <li>
                         <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-user-tie"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
@@ -69,96 +60,8 @@
                      </li>
                      <li><a href="calendar.html" class="iq-waves-effect"><i class="las la-calendar"></i><span>Calendar</span></a></li>
                      <li><a href="chat.html" class="iq-waves-effect"><i class="las la-sms"></i><span>Chat</span></a></li>
-                     <li>
-                        <a href="#ecommerce" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-shopping-cart-line"></i><span>E-commerce</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="ecommerce" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="e-commerce-product-list.html">Product Listing</a></li>
-                           <li><a href="e-commerce-product-detail.html">Product Details</a></li>
-                           <li><a href="e-commerce-checkout.html">Checkout</a></li>
-                        </ul>
-                     </li>
-                     <li class="iq-menu-title"><i class="ri-separator"></i><span>Components</span></li>
-                     <li>
-                        <a href="#ui-elements" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor"></i><span>UI Elements</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="ui-elements" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="ui-colors.html">colors</a></li>
-                           <li><a href="ui-typography.html">Typography</a></li>
-                           <li><a href="ui-alerts.html">Alerts</a></li>
-                           <li><a href="ui-badges.html">Badges</a></li>
-                           <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
-                           <li><a href="ui-buttons.html">Buttons</a></li>
-                           <li><a href="ui-cards.html">Cards</a></li>
-                           <li><a href="ui-carousel.html">Carousel</a></li>
-                           <li><a href="ui-embed-video.html">Video</a></li>
-                           <li><a href="ui-grid.html">Grid</a></li>
-                           <li><a href="ui-images.html">Images</a></li>
-                           <li><a href="ui-list-group.html">list Group</a></li>
-                           <li><a href="ui-media-object.html">Media</a></li>
-                           <li><a href="ui-modal.html">Modal</a></li>
-                           <li><a href="ui-notifications.html">Notifications</a></li>
-                           <li><a href="ui-pagination.html">Pagination</a></li>
-                           <li><a href="ui-popovers.html">Popovers</a></li>
-                           <li><a href="ui-progressbars.html">Progressbars</a></li>
-                           <li><a href="ui-tabs.html">Tabs</a></li>
-                           <li><a href="ui-tooltips.html">Tooltips</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#forms" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-file-alt"></i><span>Forms</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="forms" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="form-layout.html">Form Elements</a></li>
-                           <li><a href="form-validation.html">Form Validation</a></li>
-                           <li><a href="form-switch.html">Form Switch</a></li>
-                           <li><a href="form-chechbox.html">Form Checkbox</a></li>
-                           <li><a href="form-radio.html">Form Radio</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#forms-wizard" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-database"></i><span>Forms Wizard</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                           <ul id="forms-wizard" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                              <li><a href="form-wizard.html">Simple Wizard</a></li>
-                              <li><a href="form-wizard-validate.html">Validate Wizard</a></li>
-                              <li><a href="form-wizard-vertical.html">Vertical Wizard</a></li>
-                           </ul>
-                        </li>
-                     <li>
-                        <a href="#tables" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-table"></i><span>Table</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="tables" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="tables-basic.html">Basic Tables</a></li>
-                           <li><a href="data-table.html">Data Table</a></li>
-                           <li><a href="table-editable.html">Editable Table</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#charts" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-chart-bar"></i><span>Charts</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="charts" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="chart-morris.html">Morris Chart</a></li>
-                           <li><a href="chart-high.html">High Charts</a></li>
-                           <li><a href="chart-am.html">Am Charts</a></li>
-                           <li><a href="chart-apex.html">Apex Chart</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#icons" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-icons"></i><span>Icons</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="icons" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="icon-dripicons.html">Dripicons</a></li>
-                           <li><a href="icon-fontawesome-5.html">Font Awesome 5</a></li>
-                           <li><a href="icon-lineawesome.html">line Awesome</a></li>
-                           <li><a href="icon-remixicon.html">Remixicon</a></li>
-                           <li><a href="icon-unicons.html">unicons</a></li>
-                        </ul>
-                     </li>
-                     <li class="iq-menu-title"><i class="ri-separator"></i><span>Pages</span></li>
-                     <li>
-                        <a href="#authentication" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-file-contract"></i><span>Authentication</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="authentication" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="sign-in.html">Login</a></li>
-                           <li><a href="sign-up.html">Register</a></li>
-                           <li><a href="pages-recoverpw.html">Recover Password</a></li>
-                           <li><a href="pages-confirm-mail.html">Confirm Mail</a></li>
-                           <li><a href="pages-lock-screen.html">Lock Screen</a></li>
-                        </ul>
-                     </li>
+                    
+                     
                      <li>
                         <a href="#map" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-map-marker"></i><span>Maps</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="map" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
@@ -209,9 +112,9 @@
             <div class="iq-navbar-custom">
                <div class="iq-sidebar-logo">
                   <div class="top-logo">
-                     <a href="index.html" class="logo">
-                     <img src="images/logo.gif" class="img-fluid" alt="">
-                     <span>Metorik</span>
+                     <a href="<?= base_url("index.php")?>" class="logo">
+                     <img src="<?= base_url("assets/images/logo.gif") ?>" class="img-fluid" alt="">
+                     <span>Dashboard Management</span>
                      </a>
                   </div>
                </div>
@@ -219,7 +122,7 @@
                   <h5 class="mb-0">Dashboard</h5>
                   <nav aria-label="breadcrumb">
                      <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url("index.php")?>">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Home</li>
                      </ul>
                   </nav>
@@ -243,145 +146,13 @@
                               <input type="text" class="text search-input" placeholder="Type here to search..." />
                            </form>
                         </li>
-                        <li class="nav-item dropdown">
-                           <a href="#" class="search-toggle iq-waves-effect">
-                              <i class="ri-mail-line"></i>
-                              <span class="badge badge-pill badge-dark badge-up count-mail">5</span>
-                           </a>
-                           <div class="iq-sub-dropdown">
-                              <div class="iq-card shadow-none m-0">
-                                 <div class="iq-card-body p-0 ">
-                                    <div class="bg-primary p-3">
-                                       <h5 class="mb-0 text-white">All Messages<small class="badge  badge-light float-right pt-1">5</small></h5>
-                                    </div>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">Nik Emma Watson</h6>
-                                             <small class="float-left font-size-12">13 Jun</small>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">Lorem Ipsum Watson</h6>
-                                             <small class="float-left font-size-12">20 Apr</small>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40 rounded" src="images/user/03.jpg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">Why do we use it?</h6>
-                                             <small class="float-left font-size-12">30 Jun</small>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">Variations Passages</h6>
-                                             <small class="float-left font-size-12">12 Sep</small>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40 rounded" src="images/user/05.jpg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">Lorem Ipsum generators</h6>
-                                             <small class="float-left font-size-12">5 Dec</small>
-                                          </div>
-                                       </div>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
-                        <li class="nav-item">
-                           <a href="#" class="iq-waves-effect"><i class="ri-shopping-cart-2-line"></i></a>
-                        </li>
-                        <li class="nav-item">
-                           <a href="#" class="search-toggle iq-waves-effect">
-                              <i class="ri-notification-2-line"></i>
-                              <span class="bg-danger dots"></span>
-                           </a>
-                           <div class="iq-sub-dropdown">
-                              <div class="iq-card shadow-none m-0">
-                                 <div class="iq-card-body p-0 ">
-                                    <div class="bg-danger p-3">
-                                       <h5 class="mb-0 text-white">All Notifications<small class="badge  badge-light float-right pt-1">4</small></h5>
-                                    </div>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">New Order Recieved</h6>
-                                             <small class="float-right font-size-12">23 hrs ago</small>
-                                             <p class="mb-0">Lorem is simply</p>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">Emma Watson Nik</h6>
-                                             <small class="float-right font-size-12">Just Now</small>
-                                             <p class="mb-0">95 MB</p>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">New customer is join</h6>
-                                             <small class="float-right font-size-12">5 days ago</small>
-                                             <p class="mb-0">Jond Nik</p>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a href="#" class="iq-sub-card" >
-                                       <div class="media align-items-center">
-                                          <div class="">
-                                             <img class="avatar-40" src="images/small/jpg.svg" alt="">
-                                          </div>
-                                          <div class="media-body ml-3">
-                                             <h6 class="mb-0 ">Updates Available</h6>
-                                             <small class="float-right font-size-12">Just Now</small>
-                                             <p class="mb-0">120 MB</p>
-                                          </div>
-                                       </div>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
+
                         <li class="nav-item iq-full-screen"><a href="#" class="iq-waves-effect" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a></li>
                      </ul>
                   </div>
                   <ul class="navbar-list">
                      <li>
-                        <a href="#" class="search-toggle iq-waves-effect text-white"><img src="images/user/1.jpg" class="img-fluid rounded" alt="user"></a>
+                        <a href="#" class="search-toggle iq-waves-effect text-white"><img src="<?= base_url("assets/images/user/1.jpg") ?>" class="img-fluid rounded" alt="user"></a>
                         <div class="iq-sub-dropdown iq-user-dropdown">
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">
@@ -389,50 +160,7 @@
                                     <h5 class="mb-0 text-white line-height">Hello Nik jone</h5>
                                     <span class="text-white font-size-12">Available</span>
                                  </div>
-                                 <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">
-                                    <div class="media align-items-center">
-                                       <div class="rounded iq-card-icon iq-bg-primary">
-                                          <i class="ri-file-user-line"></i>
-                                       </div>
-                                       <div class="media-body ml-3">
-                                          <h6 class="mb-0 ">My Profile</h6>
-                                          <p class="mb-0 font-size-12">View personal profile details.</p>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <a href="profile-edit.html" class="iq-sub-card iq-bg-primary-success-hover">
-                                    <div class="media align-items-center">
-                                       <div class="rounded iq-card-icon iq-bg-success">
-                                          <i class="ri-profile-line"></i>
-                                       </div>
-                                       <div class="media-body ml-3">
-                                          <h6 class="mb-0 ">Edit Profile</h6>
-                                          <p class="mb-0 font-size-12">Modify your personal details.</p>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <a href="account-setting.html" class="iq-sub-card iq-bg-primary-danger-hover">
-                                    <div class="media align-items-center">
-                                       <div class="rounded iq-card-icon iq-bg-danger">
-                                          <i class="ri-account-box-line"></i>
-                                       </div>
-                                       <div class="media-body ml-3">
-                                          <h6 class="mb-0 ">Account settings</h6>
-                                          <p class="mb-0 font-size-12">Manage your account parameters.</p>
-                                       </div>
-                                    </div>
-                                 </a>
-                                 <a href="privacy-setting.html" class="iq-sub-card iq-bg-primary-secondary-hover">
-                                    <div class="media align-items-center">
-                                       <div class="rounded iq-card-icon iq-bg-secondary">
-                                          <i class="ri-lock-line"></i>
-                                       </div>
-                                       <div class="media-body ml-3">
-                                          <h6 class="mb-0 ">Privacy Settings</h6>
-                                          <p class="mb-0 font-size-12">Control your privacy parameters.</p>
-                                       </div>
-                                    </div>
-                                 </a>
+                                 
                                  <div class="d-inline-block w-100 text-center p-3">
                                     <a class="iq-bg-danger iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                  </div>
@@ -493,7 +221,7 @@
                   </div>
                   <div class="col-md-6 col-lg-3">
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
-                        <div class="iq-card-body p-0" style="background: url(images/page-img/01.png) no-repeat scroll center center; background-size: contain; min-height: 202px;">
+                        <div class="iq-card-body p-0" style="background: url(assets/images/page-img/01.png) no-repeat scroll center center; background-size: contain; min-height: 202px;">
                         </div>
                      </div>
                   </div>
@@ -1021,35 +749,35 @@
       <!-- Footer END -->
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+      <script src="<?= base_url("assets/js/jquery.min.js") ?>"></script>
+      <script src="<?= base_url("assets/js/popper.min.js") ?>"></script>
+      <script src="<?= base_url("assets/js/bootstrap.min.js") ?>"></script>
       <!-- Appear JavaScript -->
-      <script src="js/jquery.appear.js"></script>
+      <script src="<?= base_url("assets/js/jquery.appear.js") ?>"></script>
       <!-- Countdown JavaScript -->
-      <script src="js/countdown.min.js"></script>
+      <script src="<?= base_url("assets/js/countdown.min.js") ?>"></script>
       <!-- Counterup JavaScript -->
-      <script src="js/waypoints.min.js"></script>
-      <script src="js/jquery.counterup.min.js"></script>
+      <script src="<?= base_url("assets/js/waypoints.min.js") ?>"></script>
+      <script src="<?= base_url("assets/js/jquery.counterup.min.js") ?>"></script>
       <!-- Wow JavaScript -->
-      <script src="js/wow.min.js"></script>
+      <script src="<?= base_url("assets/js/wow.min.js") ?>"></script>
       <!-- Apexcharts JavaScript -->
-      <script src="js/apexcharts.js"></script>
+      <script src="<?= base_url("assets/js/apexcharts.js") ?>"></script>
       <!-- Slick JavaScript -->
-      <script src="js/slick.min.js"></script>
+      <script src="<?= base_url("assets/js/slick.min.js") ?>"></script>
       <!-- Select2 JavaScript -->
-      <script src="js/select2.min.js"></script>
+      <script src="<?= base_url("assets/js/select2.min.js") ?>"></script>
       <!-- Owl Carousel JavaScript -->
-      <script src="js/owl.carousel.min.js"></script>
+      <script src="<?= base_url("assets/js/owl.carousel.min.js") ?>"></script>
       <!-- Magnific Popup JavaScript -->
-      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="<?= base_url("assets/js/jquery.magnific-popup.min.js") ?>"></script>
       <!-- Smooth Scrollbar JavaScript -->
-      <script src="js/smooth-scrollbar.js"></script>
+      <script src="<?= base_url("assets/js/smooth-scrollbar.js") ?>"></script>
       <!-- lottie JavaScript -->
-      <script src="js/lottie.js"></script>
+      <script src="<?= base_url("assets/js/lottie.js") ?>"></script>
       <!-- Chart Custom JavaScript -->
-      <script src="js/chart-custom.js"></script>
+      <script src="<?= base_url("assets/js/chart-custom.js") ?>"></script>
       <!-- Custom JavaScript -->
-      <script src="js/custom.js"></script>
+      <script src="<?= base_url("assets/js/custom.js") ?>"></script>
    </body>
 </html>
