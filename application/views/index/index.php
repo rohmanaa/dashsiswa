@@ -18,16 +18,13 @@
    </head>
    <body class="header-top-bg">
       <!-- loader Start -->
-      <div id="loading">
-         
-      </div>
       <!-- loader END -->
       <!-- Wrapper Start -->
       <div class="wrapper">
          <!-- Sidebar  -->
          <div class="iq-sidebar">
             <div class="iq-sidebar-logo d-flex justify-content-between">
-               <a href="<?php echo site_url('index') ?>">
+               <a href="<?= site_url('index') ?>">
                <img src="<?= base_url("assets/images/logo.gif") ?>" class="img-fluid" alt="">
                <span>DQM</span>
                </a>
@@ -43,63 +40,16 @@
                <nav class="iq-sidebar-menu">
                   <ul id="iq-sidebar-toggle" class="iq-menu">
                      <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
-
                      <li class="active">
-                        <a href="<?php site_url('index') ?>"><i class="las la-home"></i><span>Dashboard</span></a>
+                        <a href="<?= site_url('index') ?>"><i class="las la-home"></i><span>Dashboard</span></a>
                      </li>
                      
-                        <li><a href="<?php site_url('siswa') ?>" class="iq-waves-effect"><i class="las la-check-square"></i><span>Siswa</span></a></li>
+                        <li><a href="<?= site_url('siswa') ?>" class="iq-waves-effect"><i class="las la-check-square"></i><span>Siswa</span></a></li>
                      <li>
                         <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-user-tie"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="profile.html">User Profile</a></li>
-                           <li><a href="profile-edit.html">User Edit</a></li>
-                           <li><a href="add-user.html">User Add</a></li>
-                           <li><a href="user-list.html">User List</a></li>
-                        </ul>
-                     </li>
-                     <li><a href="calendar.html" class="iq-waves-effect"><i class="las la-calendar"></i><span>Calendar</span></a></li>
-                     <li><a href="chat.html" class="iq-waves-effect"><i class="las la-sms"></i><span>Chat</span></a></li>
-                    
-                     
-                     <li>
-                        <a href="#map" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-map-marker"></i><span>Maps</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="map" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="pages-map.html">Google Map</a></li>
-                           <li><a href="#">Vector Map</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#extra-pages" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-codepen"></i><span>Extra Pages</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="extra-pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="pages-timeline.html">Timeline</a></li>
-                           <li><a href="pages-invoice.html">Invoice</a></li>
-                           <li><a href="blank-page.html">Blank Page</a></li>
-                           <li><a href="pages-error.html">Error 404</a></li>
-                           <li><a href="pages-error-500.html">Error 500</a></li>
-                           <li><a href="pages-pricing.html">Pricing</a></li>
-                           <li><a href="pages-pricing-one.html">Pricing 1</a></li>
-                           <li><a href="pages-maintenance.html">Maintenance</a></li>
-                           <li><a href="pages-comingsoon.html">Coming Soon</a></li>
-                           <li><a href="pages-faq.html">Faq</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#menu-level" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-record-circle-line"></i><span>Menu Level</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="menu-level" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 1</a></li>
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 2</a>
-                              <li>
-                                 <a href="#sub-menu" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-play-circle-line"></i><span>Sub-menu</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                                 <ul id="sub-menu" class="iq-submenu iq-submenu-data collapse">
-                                    <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 1</a></li>
-                                    <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 2</a></li>
-                                    <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 3</a></li>
-                                 </ul>
-                              </li>
-                           </li>
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 3</a></li>
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 4</a></li>
+                           <li><a href="<?= site_url('user/user_add') ?>"> User Add</a></li>
+                           <li><a href="<?= site_url('user_list') ?>"> User List</a></li>
                         </ul>
                      </li>
                   </ul>
@@ -112,7 +62,7 @@
             <div class="iq-navbar-custom">
                <div class="iq-sidebar-logo">
                   <div class="top-logo">
-                     <a href="<?= base_url("index.php")?>" class="logo">
+                     <a href="#" class="logo">
                      <img src="<?= base_url("assets/images/logo.gif") ?>" class="img-fluid" alt="">
                      <span>Dashboard Management</span>
                      </a>
@@ -122,8 +72,7 @@
                   <h5 class="mb-0">Dashboard</h5>
                   <nav aria-label="breadcrumb">
                      <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= base_url("index.php")?>">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                        <li class="breadcrumb-item"><a href="#">Halaman Utama</a></li>
                      </ul>
                   </nav>
                </div>
@@ -156,8 +105,8 @@
                         <div class="iq-sub-dropdown iq-user-dropdown">
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">
-                                 <div class="bg-primary p-3">
-                                    <h5 class="mb-0 text-white line-height">Hello Nik jone</h5>
+                                 <div class="bg-info p-3">
+                                    <h5 class="mb-0 text-white line-height">Hello (Nama))</h5>
                                     <span class="text-white font-size-12">Available</span>
                                  </div>
                                  
