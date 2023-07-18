@@ -6,7 +6,12 @@ class User extends CI_Controller{
     }
     
     function userlist(){
-        $this->load->view('user/user_list');
+        // $user_data = $this->User_model->get_all();
+
+        $data = [
+            'user_data' => $this->User_model->get_all()
+        ];
+        $this->load->view('user/user_list', $data);
     } 
 
 

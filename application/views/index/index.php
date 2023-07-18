@@ -49,7 +49,7 @@
                         <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-user-tie"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                            <li><a href="<?= site_url('user/user_add') ?>"> User Add</a></li>
-                           <li><a href="<?= site_url('user/user_list') ?>"> User List</a></li>
+                           <li><a href="<?= site_url('user/userlist') ?>"> User List</a></li>
                         </ul>
                      </li>
                   </ul>
