@@ -4,7 +4,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Dashboard Management DQM</title>
+      <title>Dashboard Siswa</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="<?= base_url("assets/images/favicon.ico") ?>" />
       <!-- Bootstrap CSS -->
@@ -43,63 +43,16 @@
                <nav class="iq-sidebar-menu">
                   <ul id="iq-sidebar-toggle" class="iq-menu">
                      <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
-
                      <li class="active">
-                        <a href="#dashboard"><i class="las la-home"></i><span>Dashboard</span></a>
+                        <a href="<?= site_url('index') ?>"><i class="las la-home"></i><span>Dashboard</span></a>
                      </li>
                      
-                        <li><a href="todo.html" class="iq-waves-effect"><i class="las la-check-square"></i><span>Todo</span></a></li>
+                        <li><a href="<?= site_url('siswa/siswadb') ?>" class="iq-waves-effect"><i class="las la-school"></i><span>Siswa</span></a></li>
                      <li>
                         <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-user-tie"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="profile.html">User Profile</a></li>
-                           <li><a href="profile-edit.html">User Edit</a></li>
-                           <li><a href="add-user.html">User Add</a></li>
-                           <li><a href="user-list.html">User List</a></li>
-                        </ul>
-                     </li>
-                     <li><a href="calendar.html" class="iq-waves-effect"><i class="las la-calendar"></i><span>Calendar</span></a></li>
-                     <li><a href="chat.html" class="iq-waves-effect"><i class="las la-sms"></i><span>Chat</span></a></li>
-                    
-                     
-                     <li>
-                        <a href="#map" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-map-marker"></i><span>Maps</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="map" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="pages-map.html">Google Map</a></li>
-                           <li><a href="#">Vector Map</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#extra-pages" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-codepen"></i><span>Extra Pages</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="extra-pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="pages-timeline.html">Timeline</a></li>
-                           <li><a href="pages-invoice.html">Invoice</a></li>
-                           <li><a href="blank-page.html">Blank Page</a></li>
-                           <li><a href="pages-error.html">Error 404</a></li>
-                           <li><a href="pages-error-500.html">Error 500</a></li>
-                           <li><a href="pages-pricing.html">Pricing</a></li>
-                           <li><a href="pages-pricing-one.html">Pricing 1</a></li>
-                           <li><a href="pages-maintenance.html">Maintenance</a></li>
-                           <li><a href="pages-comingsoon.html">Coming Soon</a></li>
-                           <li><a href="pages-faq.html">Faq</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#menu-level" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-record-circle-line"></i><span>Menu Level</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                        <ul id="menu-level" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 1</a></li>
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 2</a>
-                              <li>
-                                 <a href="#sub-menu" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-play-circle-line"></i><span>Sub-menu</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                                 <ul id="sub-menu" class="iq-submenu iq-submenu-data collapse">
-                                    <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 1</a></li>
-                                    <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 2</a></li>
-                                    <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 3</a></li>
-                                 </ul>
-                              </li>
-                           </li>
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 3</a></li>
-                           <li><a href="#"><i class="ri-record-circle-line"></i>Menu 4</a></li>
+                           <li><a href="<?= site_url('user/user_add') ?>"> User Add</a></li>
+                           <li><a href="<?= site_url('user/user_list') ?>"> User List</a></li>
                         </ul>
                      </li>
                   </ul>
@@ -152,12 +105,12 @@
                   </div>
                   <ul class="navbar-list">
                      <li>
-                        <a href="#" class="search-toggle iq-waves-effect text-white"><img src="<?= base_url("assets/images/user/1.jpg") ?>" class="img-fluid rounded" alt="user"></a>
+                     <a href="#" class="search-toggle iq-waves-effect text-white"> <i class="ri-user-line"></i> </a>
                         <div class="iq-sub-dropdown iq-user-dropdown">
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">
-                                 <div class="bg-primary p-3">
-                                    <h5 class="mb-0 text-white line-height">Hello Nik jone</h5>
+                                 <div class="bg-info p-3">
+                                    <h5 class="mb-0 text-white line-height">Hello (Nama))</h5>
                                     <span class="text-white font-size-12">Available</span>
                                  </div>
                                  

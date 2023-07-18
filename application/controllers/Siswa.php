@@ -4,8 +4,8 @@ class Siswa extends CI_Controller{
         parent::__construct();
     }
 
-    function siswa(){
-        $this->load->view('siswa/siswa');
+    function siswadb(){
+        $this->load->view('siswa/siswa_db');
     } 
     }
 ?>

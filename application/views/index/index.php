@@ -44,12 +44,12 @@
                         <a href="<?= site_url('index') ?>"><i class="las la-home"></i><span>Dashboard</span></a>
                      </li>
                      
-                        <li><a href="<?= site_url('siswa') ?>" class="iq-waves-effect"><i class="las la-check-square"></i><span>Siswa</span></a></li>
+                        <li><a href="<?= site_url('siswa/siswadb') ?>" class="iq-waves-effect"><i class="las la-school"></i><span>Siswa</span></a></li>
                      <li>
                         <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-user-tie"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                            <li><a href="<?= site_url('user/user_add') ?>"> User Add</a></li>
-                           <li><a href="<?= site_url('user_list') ?>"> User List</a></li>
+                           <li><a href="<?= site_url('user/user_list') ?>"> User List</a></li>
                         </ul>
                      </li>
                   </ul>
@@ -101,7 +101,7 @@
                   </div>
                   <ul class="navbar-list">
                      <li>
-                        <a href="#" class="search-toggle iq-waves-effect text-white"><img src="<?= base_url("assets/images/user/1.jpg") ?>" class="img-fluid rounded" alt="user"></a>
+                        <a href="#" class="search-toggle iq-waves-effect text-white"> <i class="ri-user-line"></i> </a>
                         <div class="iq-sub-dropdown iq-user-dropdown">
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">

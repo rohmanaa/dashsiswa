@@ -40,16 +40,16 @@
                <nav class="iq-sidebar-menu">
                   <ul id="iq-sidebar-toggle" class="iq-menu">
                      <li class="iq-menu-title"><i class="ri-separator"></i><span>Main</span></li>
-                     <li class="active">
+                     <li>
                         <a href="<?= site_url('index') ?>"><i class="las la-home"></i><span>Dashboard</span></a>
                      </li>
                      
-                        <li><a href="<?= site_url('siswa') ?>" class="iq-waves-effect"><i class="las la-check-square"></i><span>Siswa</span></a></li>
-                     <li>
+                        <li><a href="<?= site_url('siswa/siswadb') ?>" class="iq-waves-effect"><i class="las la-check-square"></i><span>Siswa</span></a></li>
+                     <li  class="active">
                         <a href="#user-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-user-tie"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                         <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                            <li><a href="<?= site_url('user/user_add') ?>"> User Add</a></li>
-                           <li><a href="<?= site_url('user_list') ?>"> User List</a></li>
+                           <li><a href="<?= site_url('user/user_list') ?>"> User List</a></li>
                         </ul>
                      </li>
                   </ul>
@@ -101,7 +101,7 @@
                   </div>
                   <ul class="navbar-list">
                      <li>
-                        <a href="#" class="search-toggle iq-waves-effect text-white"><img src="<?= base_url("assets/images/user/1.jpg") ?>" class="img-fluid rounded" alt="user"></a>
+                     <a href="#" class="search-toggle iq-waves-effect text-white"> <i class="ri-user-line"></i> </a>
                         <div class="iq-sub-dropdown iq-user-dropdown">
                            <div class="iq-card shadow-none m-0">
                               <div class="iq-card-body p-0 ">
@@ -126,8 +126,8 @@
          <!-- Page Content  -->
          <div id="content-page" class="content-page">
             <div class="container-fluid">
-               <div class="col-lg-12">
-                  <div class="row">
+            <div class="col-sm-12">
+
                    <div class="iq-card">
                                  <div class="iq-card-header d-flex justify-content-between">
                                     <div class="iq-header-title">
@@ -135,7 +135,7 @@
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
-                                    <form>
+                                    <form action="<?= site_url('user/user_input') ?>" method="post">
                                        <div class="form-group row align-items-center">
                                           <div class="col-md-12">
                                              <div class="profile-img-edit">
@@ -150,19 +150,19 @@
                                        <div class=" row align-items-center">
                                           <div class="form-group col-sm-6">
                                              <label for="ndn">Nama Depan:</label>
-                                             <input type="text" class="form-control" id="fname" placeholder="Nama Depan">
+                                             <input type="text" class="form-control" name="nm_dpn" id="nm_dpn" placeholder="Nama Depan">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="nbl">Nama Belakang:</label>
-                                             <input type="text" class="form-control" id="lname" placeholder="Nama Belakang">
+                                             <input type="text" class="form-control" name="nm_bk" id="nm_bk" placeholder="Nama Belakang">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="nowa">No. WA</label>
-                                             <input type="text" class="form-control" id="uname" placeholder="Nomor WhatsApp">
+                                             <input type="text" class="form-control" name="no_wa" id="no_wa" placeholder="Nomor WhatsApp">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="daerah">Daerah</label>
-                                             <input type="text" class="form-control" id="cname" placeholder="Daerah Asal">
+                                             <input type="text" class="form-control" name="da_sal" id="da_sal" placeholder="Daerah Asal">
                                           </div>
                                           <!-- <div class="form-group col-sm-6">
                                              <label class="d-block">Gender:</label>
@@ -177,13 +177,12 @@
                                           </div> -->
                                           <div class="form-group col-sm-6">
                                              <label for="dob">Tanggal Lahir</label>
-                                             <input type="date" class="form-control" id="dob">
+                                             <input type="date" class="form-control" name="tgl_lh" id="tgl_lh">
                                           </div>
                                           
                                           <div class="form-group col-sm-6">
                                              <label>Kewarganegaraan</label>
-                                             <select class="form-control" id="warganegara">
-                                                <option unselected="">Pilih</option>
+                                             <select class="form-control" name="kwg" id="kwg">
                                                 <option>WNI</option>
                                                 <option>WNA</option>
                                              </select>
@@ -194,12 +193,12 @@
                                              <textarea class="form-control" name="alamat" rows="5" style="line-height: 22px;"></textarea>
                                           </div>
                                        </div>
-                                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                       <button type="reset" class="btn iq-bg-danger">Batal</button>
+                                       <input type="hidden" name="id"/>
+                                       <button type="submit" class="btn btn-info mr-2" >Submit</button>
+                                       <a href="<?= site_url('index') ?>" class="btn btn-default btn-lg btn3d">Cancel</a>
                                     </form>
                                  </div>
                               </div>
-                     </div>
                </div>
             </div>
          </div>
