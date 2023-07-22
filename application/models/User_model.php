@@ -14,8 +14,10 @@ function insert($data){
     $this->db->insert($this->table, $data);
 }
 
-function delete($data){
-    $this->db->delete($this->table, $data);
+function delete($id){
+    $this->db->where('id',$id);
+    $this->db->delete($this->table);
+
 }
 
 function get_all(){

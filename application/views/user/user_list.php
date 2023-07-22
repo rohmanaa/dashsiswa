@@ -191,7 +191,7 @@
                                        <div class="flex align-items-center list-user-action">
                                        <button class="btn btn-sm iq-bg-success"><span class="pl-1"><i class="ri-eye-line" data-toggle="modal" data-target="#exampleModalCenter"></i></span></i></button>
                                        <button class="btn btn-sm iq-bg-info"><span class="pl-1"><i class="ri-pencil-line" data-toggle="modal" data-target="#exampleModalCenter"></i></span></i></button>
-                                       <button class="btn btn-sm iq-bg-danger"><span class="pl-1"><i class="ri-delete-bin-line" data-toggle="modal" data-target="#exampleModalCenter"></i></span></i></button>
+                                       <a href="<?php echo site_url('user/delete/' . $user->id) ?>" class="btn btn-sm iq-bg-danger"><span class="pl-1"><i class="ri-delete-bin-line"></i></span></i></a>
                                        </div>
                                     </td>
                                  </tr>

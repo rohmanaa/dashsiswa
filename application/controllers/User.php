@@ -15,8 +15,6 @@ class User extends CI_Controller{
             'user_data' => $this->User_model->get_all()
         ];
         $this->load->view('user/user_list', $data);
-
-        
     } 
 
 
@@ -62,6 +60,13 @@ class User extends CI_Controller{
         }
 
         
+    }
+
+    function delete($id)
+    {
+        $this->User_model->delete($id);
+        redirect('user/userlist');
+        // redirect($_SERVER['HTTP_REFERER']);
     }
 
     function user_lihat()
