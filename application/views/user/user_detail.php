@@ -4,7 +4,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>List User</title>
+      <title>Menambah User</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="<?= base_url("assets/images/favicon.ico") ?>" />
       <!-- Bootstrap CSS -->
@@ -126,125 +126,75 @@
          <!-- Page Content  -->
          <div id="content-page" class="content-page">
             <div class="container-fluid">
-            
             <div class="col-sm-12">
-                  <div class="iq-card">
-                     <div class="iq-card-header d-flex justify-content-between">
-                        <div class="iq-header-title">
-                           <h4 class="card-title">User List</h4>
-                        </div>
-                     </div>
-                     <div class="iq-card-body">
-                     <div class="row justify-content-between">
-                              <div class="col-sm-12 col-md-6">
-                                 <div id="user_list_datatable_info" class="dataTables_filter">
-                                    <form class="mr-3 position-relative">
-                                       <div class="form-group mb-0">
-                                          <input type="search" class="form-control" id="exampleInputSearch" placeholder="Search" aria-controls="user-list-table">
+
+                   <div class="iq-card">
+                                 <div class="iq-card-header d-flex justify-content-between">
+                                    <div class="iq-header-title">
+                                       <h4 class="card-title">Detail Pribadi</h4>
+                                    </div>
+                                 </div>
+                                 <div class="iq-card-body">
+                                       <div class="form-group row align-items-center">
+                                          <div class="col-md-12">
+                                             <div class="profile-img-edit">
+                                                <img class="profile-pic" src="<?= base_url("assets/images/user/11.png") ?>" alt="profile-pic">
+                                                <div class="p-image">
+                                                  <i class="ri-pencil-line upload-button"></i>
+                                                  <input class="file-upload" type="file" accept="image/*">
+                                               </div>
+                                             </div>
+                                          </div>
                                        </div>
-                                    </form>
+                                       <div class=" row align-items-center">
+                                          <div class="form-group col-sm-6">
+                                             <label for="ndn">Nama Depan:</label>
+                                             <input type="text" class="form-control" readonly value="<?= $detail->nm_dpn ?>">
+                                          </div>
+                                          <div class="form-group col-sm-6">
+                                             <label for="nbl">Nama Belakang:</label>
+                                             <input type="text" class="form-control" readonly value="<?= $detail->nm_bk ?>">
+                                          </div>
+                                          <div class="form-group col-sm-6">
+                                             <label for="nowa">No. WA</label>
+                                             <input type="text" class="form-control" readonly value="<?= $detail->no_wa ?>">
+                                          </div>
+                                          <div class="form-group col-sm-6">
+                                             <label for="daerah">Daerah</label>
+                                             <input type="text" class="form-control" readonly value="<?= $detail->da_sal ?>">
+                                          </div>
+                                          <!-- <div class="form-group col-sm-6">
+                                             <label class="d-block">Gender:</label>
+                                             <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="customRadio6" name="customRadio1" class="custom-control-input" checked="">
+                                                <label class="custom-control-label" for="customRadio6"> Male </label>
+                                             </div>
+                                             <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="customRadio7" name="customRadio1" class="custom-control-input">
+                                                <label class="custom-control-label" for="customRadio7"> Female </label>
+                                             </div>
+                                          </div> -->
+                                          <div class="form-group col-sm-6">
+                                             <label for="dob">Tanggal Lahir</label>
+                                             <input type="text" class="form-control" readonly value="<?= $detail->tgl_lh ?>">
+                                          </div>
+
+                                          <div class="form-group col-sm-6">
+                                             <label for="dob">Kewarganegaraan</label>
+                                             <input type="text" class="form-control" readonly value="<?= $detail->kwg ?>">
+                                          </div>
+                                          
+                                          <div class="form-group col-sm-12">
+                                             <label>Alamat:</label>
+                                             <textarea class="form-control" readonly rows="5" style="line-height: 22px;" ><?= $detail->alamat ?></textarea>
+                                          </div>
+                                       </div>
                                  </div>
                               </div>
-                              <div class="col-sm-12 col-md-6">
-                                 <div class="user-list-files d-flex float-right">
-                                    <a href="javascript:void();" class="chat-icon-phone">
-                                       Print
-                                     </a>
-                                    <a href="javascript:void();" class="chat-icon-video">
-                                       Excel
-                                     </a>
-                                     <a href="javascript:void();" class="chat-icon-delete">
-                                       Pdf
-                                     </a>
-                                   </div>
-                              </div>
-                           </div>
-                        <div class="table-responsive">
-                           
-                           <table id="user-list-table" class="table table-striped table-bordered mt-4" role="grid" aria-describedby="user-list-page-info">
-                             <thead>
-                                 <tr>
-                                    <th>No</th>                           
-                                    <th>Nama</th>
-                                    <th>WhatsApp</th>
-                                    <th>Tgl Lahir</th>
-                                    <th>Daerah Asal</th>
-                                    <th>Kewarganegaraan</th>
-                                    <th>Alamat</th>
-                                    <th>Action</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
-                              <?php
-                                 $start=0;
-                                 foreach($user_data as $user)
-                                 { ?>
-                                 <tr>
-                                    <td><?= ++$start ?></td>
-                                    <td><?= $user->nm_dpn .' '. $user->nm_bk  ?></td>
-                                    <td><?= $user->no_wa ?></td>
-                                    <td><?= $user->tgl_lh ?> </td>
-                                    <td><?= $user->da_sal ?></td>
-                                    <td><?= $user->kwg ?> </td>
-                                    <td><?= $user->alamat ?></td>
-                                    <td>
-                                       <div class="flex align-items-center list-user-action">
-                                       <a href="<?php echo site_url('user/detail/' . $user->id)?>" class="btn btn-sm iq-bg-success"><span class="pl-1"><i class="ri-eye-line"></i></span></i></a>
-                                       <button class="btn btn-sm iq-bg-info"><span class="pl-1"><i class="ri-pencil-line" data-toggle="modal" data-target="#exampleModalCenter"></i></span></i></button>
-                                       <a href="<?php echo site_url('user/delete/' . $user->id) ?>" class="btn btn-sm iq-bg-danger"><span class="pl-1"><i class="ri-delete-bin-line"></i></span></i></a>
-                                       </div>
-                                    </td>
-                                 </tr>
-                              <?php } ?>                               
-                             </tbody>
-                           </table>
-                        </div>
-                           <div class="row justify-content-between mt-3">
-                              <div id="user-list-page-info" class="col-md-6">
-                                 <span>Showing 1 to 5 of 5 entries</span>
-                              </div>
-                              <div class="col-md-6">
-                                 <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-end mb-0">
-                                       <li class="page-item disabled">
-                                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                                       </li>
-                                       <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                       <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                       <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                       <li class="page-item">
-                                          <a class="page-link" href="#">Next</a>
-                                       </li>
-                                    </ul>
-                                 </nav>
-                              </div>
-                           </div>
-                     </div>
-                  </div>
+               </div>
             </div>
-
          </div>
       </div>
-
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                       <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                       <span aria-hidden="true">&times;</span>
-                                       </button>
-                                    </div>
-                                    <div class="modal-body">
-                                       ...
-                                    </div>
-                                    <div class="modal-footer">
-                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                       <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
       <!-- Wrapper END -->
       <!-- Footer -->
       <footer class="bg-white iq-footer">

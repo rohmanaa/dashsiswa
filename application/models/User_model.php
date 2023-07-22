@@ -14,8 +14,15 @@ function insert($data){
     $this->db->insert($this->table, $data);
 }
 
+function detail_user($id){
+    $this->db->select('*');
+    $this->db->from('tb_user');
+    $this->db->where('id', $id);
+    return $this->db->get();
+}
+
 function delete($id){
-    $this->db->where('id',$id);
+    $this->db->where('id', $id);
     $this->db->delete($this->table);
 
 }

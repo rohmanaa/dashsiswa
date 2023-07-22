@@ -69,9 +69,11 @@ class User extends CI_Controller{
         // redirect($_SERVER['HTTP_REFERER']);
     }
 
-    function user_lihat()
-    {
-        $this->load->view('user/user_detail');
+    function detail($id){
+        $data=[
+            'detail' =>  $this->User_model->detail_user($id)->row()
+        ];
+        $this->load->view('user/user_detail', $data);
     }
 
     }
