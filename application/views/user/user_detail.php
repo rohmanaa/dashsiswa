@@ -186,7 +186,7 @@
                                           
                                           <div class="form-group col-sm-12">
                                              <label>Alamat:</label>
-                                             <textarea class="form-control" readonly rows="5" style="line-height: 22px;" ><?= $detail->alamat ?></textarea>
+                                             <textarea class="form-control" readonly rows="5" style="line-height: 22px;"><?= $detail->alamat ?></textarea>
                                           </div>
                                        </div>
                                  </div>
