@@ -4,7 +4,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Menambah User</title>
+      <title>Edit User</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="<?= base_url("assets/images/favicon.ico") ?>" />
       <!-- Bootstrap CSS -->
