@@ -136,7 +136,7 @@
                                  </div>
                                  <div class="iq-card-body">
                                  <?php echo validation_errors(); ?>
-                                    <form action="<?= site_url('user/update_user') ?>" method="post">
+                                    <form action="<?= site_url('user/simpan') ?>" method="post">
                                        <div class="form-group row align-items-center">
                                           <div class="col-md-12">
                                              <div class="profile-img-edit">
@@ -152,22 +152,22 @@
                                           <div class="form-group col-sm-6">
                                              <label for="ndn">Nama Depan:</label>
                                              <?php echo form_error('nm_dpn'); ?>
-                                             <input type="text" class="form-control" name="nm_dpn" id="nm_dpn" placeholder="Nama Depan" value="<?= $detail->nm_dpn ?>">
+                                             <input type="text" class="form-control" name="nm_dpn" id="nm_dpn" placeholder="Nama Depan" value="<?= $update->nm_dpn ?>">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="nbl">Nama Belakang:</label>
                                              <?php echo form_error('nm_bk'); ?>
-                                             <input type="text" class="form-control" name="nm_bk" id="nm_bk" placeholder="Nama Belakang">
+                                             <input type="text" class="form-control" name="nm_bk" id="nm_bk" placeholder="Nama Belakang" value="<?= $update->nm_bk ?>">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="nowa">No. WA</label>
                                              <?php echo form_error('no_wa'); ?>
-                                             <input type="text" class="form-control" name="no_wa" id="no_wa" placeholder="Nomor WhatsApp">
+                                             <input type="text" class="form-control" name="no_wa" id="no_wa" placeholder="Nomor WhatsApp" value="<?= $update->no_wa ?>">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="daerah">Daerah</label>
                                              <?php echo form_error('da_sal'); ?>
-                                             <input type="text" class="form-control" name="da_sal" id="da_sal" placeholder="Daerah Asal">
+                                             <input type="text" class="form-control" name="da_sal" id="da_sal" placeholder="Daerah Asal" value="<?= $update->da_sal ?>">
                                           </div>
                                           <!-- <div class="form-group col-sm-6">
                                              <label class="d-block">Gender:</label>
@@ -183,13 +183,13 @@
                                           <div class="form-group col-sm-6">
                                              <label for="dob">Tanggal Lahir</label>
                                              <?php echo form_error('tgl_lh'); ?>
-                                             <input type="date" class="form-control" name="tgl_lh" id="tgl_lh">
+                                             <input type="date" class="form-control" name="tgl_lh" id="tgl_lh" value="<?= $update->tgl_lh ?>">
                                           </div>
                                           
                                           <div class="form-group col-sm-6">
                                              <label>Kewarganegaraan</label>
                                              <?php echo form_error('kwg'); ?>
-                                             <select class="form-control" name="kwg" id="kwg">
+                                             <select class="form-control" name="kwg" id="kwg" value="<?= $update->kwg ?>">
                                                 <option value="">- Pilih Kewarganegaraan</option>
                                                 <option value="WNI">WNI</option>
                                                 <option value="WNA">WNA</option>
@@ -199,10 +199,10 @@
                                           <div class="form-group col-sm-12">
                                              <label>Alamat:</label>
                                              <?php echo form_error('alamat'); ?>
-                                             <textarea class="form-control" name="alamat" rows="5" style="line-height: 22px;"></textarea>
+                                             <textarea class="form-control" name="alamat" rows="5" style="line-height: 22px;"><?= $update->alamat ?></textarea>
                                           </div>
                                        </div>
-                                       <input type="hidden" name="id"/>
+                                       <input type="hidden" name="id" value="<?= $update->id ?>"/>
                                        <button type="submit" class="btn btn-info mr-2" >Submit</button>
                                        <a href="<?= site_url('index') ?>" class="btn btn-default btn-lg btn3d">Cancel</a>
                                     </form>

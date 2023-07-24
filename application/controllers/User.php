@@ -83,7 +83,7 @@ class User extends CI_Controller{
         $this->load->view('user/user_edit', $data);
     }
 
-    function update_user($id){
+    function simpan($id){
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('nm_dpn', 'Nama Depan', 'required', ['required' => 'Nama Depan harus diisi']);
@@ -115,10 +115,10 @@ class User extends CI_Controller{
             'alamat' => $alamat
             );
 
-        $this->User_model->update($data,'tb_user');
+        $this->User_model->update_user($data,'tb_user');
         redirect('user/userlist');
     }
-    }
+    }  
 
 
     }

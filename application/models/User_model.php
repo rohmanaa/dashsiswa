@@ -22,7 +22,6 @@ function detail_user($id){
 }
 
 function update_user($id){
-    $this->db-select('*');
     $this->db->from('tb_user');
     $this->db->where('id', $id);
     return $this->db->get();
