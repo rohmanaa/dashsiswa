@@ -21,10 +21,9 @@ function detail_user($id){
     return $this->db->get();
 }
 
-function update_user($id){
-    $this->db->from('tb_user');
+function update_user($id, $dataUpdate){
     $this->db->where('id', $id);
-    return $this->db->get();
+    $this->db->update('tb_user', $dataUpdate);
 }
 
 function delete($id){
@@ -40,3 +39,20 @@ function get_all(){
 
 }
 ?>
+
+
+<!-- 
+1. Nama Fungsi 
+2. Nama Argumen 
+    - Array 
+    - Object 
+    - Value {string : int}
+
+function namaFungsi ( $arg1 (value) , $arg2 (array) , $arg3 ){
+
+}
+
+
+function namaFungsi ( 23 , [
+        'nm_lengkap' => $this->input->post('nm_lengkap')
+    ]) -->

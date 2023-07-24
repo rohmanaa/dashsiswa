@@ -147,6 +147,9 @@
                               </div>
                               <div class="col-sm-12 col-md-6">
                                  <div class="user-list-files d-flex float-right">
+                                 <a href="<?= site_url('user/user_add') ?>" class="chat-icon-phone">
+                                       Tambah Data
+                                     </a>
                                     <a href="javascript:void();" class="chat-icon-phone">
                                        Print
                                      </a>
@@ -189,9 +192,8 @@
                                     <td><?= $user->alamat ?></td>
                                     <td>
                                        <div class="flex align-items-center list-user-action">
-                                       <a href="<?php echo site_url('user/detail/' . $user->id)?>" class="btn btn-sm iq-bg-success"><span class="p-2"><i class="ri-eye-line"></i></span></i></a>
-                                       <a href="<?php echo site_url('user/update/' . $user->id)?>" class="btn btn-sm iq-bg-info"><span class="p-2"><i class="ri-pencil-line"></i></span></i></a>
-                                       <a href="<?php echo site_url('user/delete/' . $user->id) ?>" class="btn btn-sm iq-bg-danger"><span class="p-2"><i class="ri-delete-bin-line"></i></span></i></a>
+                                       <a href="<?php echo site_url('user/detail/' . $user->id)?>" class="iq-bg-success"><i class="ri-eye-line"></i></i></a>
+                                       <a href="<?php echo site_url('user/delete/' . $user->id) ?>" class="iq-bg-danger"><i class="ri-delete-bin-line"></i></i></a>
                                        </div>
                                     </td>
                                  </tr>

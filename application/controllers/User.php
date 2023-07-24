@@ -55,6 +55,7 @@ class User extends CI_Controller{
                 'kwg' => $kwg,
                 'alamat' => $alamat
                 );
+                
             $this->User_model->insert($data,'tb_user');
             redirect('user/userlist');
         }
@@ -76,14 +77,8 @@ class User extends CI_Controller{
         $this->load->view('user/user_detail', $data);
     }
 
-    function update($id){
-        $data=[
-            'update' => $this->User_model->update_user($id)->row()
-        ];
-        $this->load->view('user/user_edit', $data);
-    }
 
-    function simpan($id){
+    function simpan(){
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('nm_dpn', 'Nama Depan', 'required', ['required' => 'Nama Depan harus diisi']);
@@ -97,6 +92,8 @@ class User extends CI_Controller{
     if ($this->form_validation->run() == FALSE){
         echo validation_errors('<div class="error">', '</div>');
     }else{
+
+        $id= $this->input->post('id', TRUE);
         $nm_dpn= $this->input->post('nm_dpn', TRUE);
         $nm_bk = $this->input->post('nm_bk', TRUE);
         $no_wa = $this->input->post('no_wa', TRUE);
@@ -114,8 +111,8 @@ class User extends CI_Controller{
             'kwg' => $kwg,
             'alamat' => $alamat
             );
-
-        $this->User_model->update_user($data,'tb_user');
+        $this->User_model->update_user($id, $data);
+        // redirect($_SERVER['HTTP_REFERER']);
         redirect('user/userlist');
     }
     }  

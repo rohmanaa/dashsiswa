@@ -135,6 +135,8 @@
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
+                                 <?php echo validation_errors(); ?>
+                                    <form action="<?= site_url('user/simpan') ?>" method="post">
                                        <div class="form-group row align-items-center">
                                           <div class="col-md-12">
                                              <div class="profile-img-edit">
@@ -149,19 +151,19 @@
                                        <div class=" row align-items-center">
                                           <div class="form-group col-sm-6">
                                              <label for="ndn">Nama Depan:</label>
-                                             <input type="text" class="form-control" readonly value="<?= $detail->nm_dpn ?>">
+                                             <input type="text" class="form-control" name="nm_dpn" id="nm_dpn" placeholder="Nama Depan" value="<?= $detail->nm_dpn ?>">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="nbl">Nama Belakang:</label>
-                                             <input type="text" class="form-control" readonly value="<?= $detail->nm_bk ?>">
+                                             <input type="text" class="form-control" name="nm_bk" id="nm_bk" placeholder="Nama Belakang" value="<?= $detail->nm_bk ?>">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="nowa">No. WA</label>
-                                             <input type="text" class="form-control" readonly value="<?= $detail->no_wa ?>">
+                                             <input type="text" class="form-control" name="no_wa" id="no_wa" placeholder="Nomor WhatsApp" value="<?= $detail->no_wa ?>">
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label for="daerah">Daerah</label>
-                                             <input type="text" class="form-control" readonly value="<?= $detail->da_sal ?>">
+                                             <input type="text" class="form-control" name="da_sal" id="da_sal" placeholder="Daerah Asal" value="<?= $detail->da_sal ?>">
                                           </div>
                                           <!-- <div class="form-group col-sm-6">
                                              <label class="d-block">Gender:</label>
@@ -176,19 +178,28 @@
                                           </div> -->
                                           <div class="form-group col-sm-6">
                                              <label for="dob">Tanggal Lahir</label>
-                                             <input type="text" class="form-control" readonly value="<?= $detail->tgl_lh ?>">
+                                             <input type="text" class="form-control" name="tgl_lh" id="tgl_lh" value="<?= $detail->tgl_lh ?>">
                                           </div>
 
                                           <div class="form-group col-sm-6">
-                                             <label for="dob">Kewarganegaraan</label>
-                                             <input type="text" class="form-control" readonly value="<?= $detail->kwg ?>">
+                                             <label>Kewarganegaraan</label>
+                                             <?php echo form_error('kwg'); ?>
+                                             <select class="form-control" name="kwg" id="kwg" value="<?= $detail->kwg ?>">
+                                                <option value="">- Pilih Kewarganegaraan</option>
+                                                <option value="WNI">WNI</option>
+                                                <option value="WNA">WNA</option>
+                                             </select>
                                           </div>
                                           
                                           <div class="form-group col-sm-12">
                                              <label>Alamat:</label>
-                                             <textarea class="form-control" readonly rows="5" style="line-height: 22px;"><?= $detail->alamat ?></textarea>
+                                             <textarea class="form-control" name="alamat" rows="5" style="line-height: 22px;"><?= $detail->alamat ?></textarea>
                                           </div>
                                        </div>
+                                             <input type="hidden" name="id" value="<?= $detail->id ?>"/>
+                                          <button type="submit" class="btn btn-info mr-2" >Submit</button>
+                                       <a href="<?= site_url('user/userlist') ?>" class="btn btn-default btn-lg btn3d">Cancel</a>
+                                    </form>
                                  </div>
                               </div>
                </div>
