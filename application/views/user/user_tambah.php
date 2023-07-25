@@ -15,6 +15,7 @@
       <link rel="stylesheet" href="<?= base_url("assets/css/style.css") ?>">
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="<?= base_url("assets/css/responsive.css") ?>">
+      
    </head>
    <body class="header-top-bg">
       <!-- loader Start -->
@@ -231,6 +232,27 @@
       </footer>
       <!-- Footer END -->
       <!-- Optional JavaScript -->
+      <script>
+      Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  }
+})
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="<?= base_url("assets/js/jquery.min.js") ?>"></script>
       <script src="<?= base_url("assets/js/popper.min.js") ?>"></script>

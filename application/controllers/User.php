@@ -5,11 +5,10 @@ class User extends CI_Controller{
         $this->load->model('User_model');
         $this->load->library('pagination');
     }
-
-
     
     function userlist(){
         // $user_data = $this->User_model->get_all();
+        $this->load->library('pagination');
 
         $data = [
             'user_data' => $this->User_model->get_all()
@@ -24,6 +23,8 @@ class User extends CI_Controller{
     }
 
     function user_input()
+
+
     {
         $this->load->library('form_validation');
 
